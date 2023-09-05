@@ -14,7 +14,9 @@ function UserProfile() {
   return (
     <div className="UserProfile">
       <Header />
-      <h1 className="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BANNER</h1>
+      <h1 className="banner">
+        <a className="banner-upload">Upload a banner</a>
+      </h1>
       <img src={userImage} className="banner-image"></img>
       <h2 className="banner-name">{useName}</h2>
       <h3>Post a Status</h3>
