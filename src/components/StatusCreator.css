@@ -2,6 +2,7 @@ button {
   color: rgb(59, 89, 151);
   font-family: "bauhaus 93";
   background-color: white;
+  border-radius: 10px;
 }
 input {
   color: rgb(59, 89, 151);

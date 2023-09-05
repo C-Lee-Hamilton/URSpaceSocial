@@ -1,35 +1,43 @@
+@font-face {
+  font-family: "Irish";
+  src: url("./fonts/Irish.ttf") format("truetype");
+}
+
 .App {
   text-align: center;
   /* background-image: url("./media/background3.png"); */
 
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center;
-  font-family: "bauhaus 93";
+  /* font-family: "bauhaus 93"; */
 
   /* padding-bottom: 10%; */
 }
-/* body {
-  background-image: url("./media/background3.png");
-  background-color: black;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
+
 .UserProfile {
   background-color: white;
   height: 100vh;
+  width: 100vw;
+  text-align: center;
   font-family: "Courier New", Courier, monospace;
 }
 .banner {
-  background-color: rgb(124, 0, 240);
+  background-color: black;
+  color: cyan;
   height: 100px;
+  text-align: center;
   margin-top: 0px;
+  font-size: 15px;
+  font-weight: lighter;
+  border-bottom: solid black;
 }
 .banner-image {
-  height: 150px;
-  border-radius: 50%;
+  height: 125px;
+  border-radius: 10px;
   margin-top: -70px;
+  border-color: rgb(32, 149, 153);
+  border: solid rgb(32, 149, 153) 2px;
 }
 .banner-name {
   height: 50px;
@@ -39,99 +47,150 @@
 }
 
 .App-header {
-  background-color: black;
-  border-style: solid;
-  border-color: #6d08e0;
   border-width: 2px;
-  border-radius: 10px;
+  border-radius: 0px;
   display: flex;
   padding-left: 10px;
-  justify-content: left;
-  font-family: "bauhaus 93";
-  font-size: 25px;
-  box-shadow: 0 0 6px 4px rgb(0, 42, 255);
-  color: rgb(124, 0, 240);
+  justify-content: right;
+
+  background-color: blueviolet;
+  font-size: 40px;
+  font-family: "Irish";
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px cyan, -2px -2px cyan;
+
+  background-image: linear-gradient(
+    rgb(32, 149, 153),
+    rgb(137, 220, 226),
+    rgb(172, 221, 255),
+    rgb(137, 174, 226),
+    rgb(94, 137, 153),
+    rgb(32, 149, 153)
+  );
 }
 .Header-component {
   background-color: black;
-  border-style: solid;
-  border-color: rgb(109, 8, 224);
+
   border-width: 2px;
-  border-radius: 10px;
-  /* display: flex;
-  padding-left: 5px;
-  justify-content: left; */
-  font-family: "bauhaus 93";
+  border-radius: 0px;
+  background-image: linear-gradient(
+    rgb(32, 149, 153),
+    rgb(137, 220, 226),
+    rgb(172, 221, 255),
+    rgb(137, 174, 226),
+    rgb(94, 137, 153),
+    rgb(32, 149, 153)
+  );
   font-size: 25px;
-  box-shadow: 0 0 6px 4px rgb(0, 42, 255);
+
   color: rgb(124, 0, 240);
-  height: 50px;
+  height: 40px;
+  margin-top: -5px;
 }
 .HeaderImg {
   display: flex;
-  padding-left: 5px;
+  margin-top: 5px;
+  float: right;
+  margin-right: 5px;
   justify-content: left;
+  height: 88%;
 }
+
 .login {
   background-color: black;
   margin: auto;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   max-width: 150px;
   font-size: 12px;
-  margin-top: 80px;
-  border-style: solid;
-  border-color: rgb(109, 8, 224);
-  border-width: 2px;
-  box-shadow: 0 0 2px 1px #7801f7;
-}
+  border-radius: 10px;
+  margin-top: 100px;
+  border-style: outset;
+  border-color: rgb(0, 177, 177);
+  border-width: 10px;
 
+  background-image: linear-gradient(
+    rgb(32, 149, 153),
+    rgb(137, 220, 226),
+    rgb(172, 221, 255),
+    rgb(137, 174, 226),
+    rgb(94, 137, 153),
+    rgb(32, 149, 153)
+  );
+}
+.inputLogin {
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.inputLoginSubmit {
+  border-radius: 10px;
+  width: 100%;
+}
+.inputLoginSubmit:hover {
+  cursor: pointer;
+}
 .greeting {
-  background-color: black;
-  border-style: solid;
-  border-color: rgb(109, 8, 224);
-  border-width: 2px;
-  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+
   margin: auto;
-  margin-top: 50px;
-  padding-top: 50px;
+  margin-bottom: -10px;
+  margin-top: -30px;
+  padding-top: 0px;
   width: 150px;
   height: 100px;
-  color: rgb(124, 8, 233);
+  line-height: 100px;
+  font-size: 40px;
+  font-family: "Irish";
+  color: black;
 
-  font-size: 35px;
-  box-shadow: 0 0 2px 1px #000000, 0 0 10px 6px rgb(11, 10, 11),
-    0 0 14px 9px rgb(108, 3, 255);
+  text-shadow: 2px 2px cyan, -2px -2px cyan;
 }
 
-.updatesBar {
-  color: rgb(109, 8, 224);
+.createAccountBar {
+  color: cyan;
   background-color: black;
-  height: 300px;
+  height: 150px;
   width: 200px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 50px;
   font-family: "Courier New", Courier, monospace;
   border-style: outset;
-  border-color: black;
+  border-color: rgb(0, 179, 179);
   border-width: 10px;
+  border-radius: 10px;
 }
-.updatesContent {
+.createAccountContent {
   text-align: left;
   margin: auto;
   padding-top: 5%;
-  padding-left: 2%;
+  padding: auto;
+  text-align: center;
   border-style: solid;
-  border-color: rgb(109, 8, 224);
-  height: 90%;
+  border-color: cyan;
+  border-radius: 10px;
+  height: 55%;
+}
+.createAccountInputs {
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.createAccountButton {
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.createAccountButton:hover {
+  cursor: pointer;
 }
 
 .menu-trigger img {
   position: absolute;
-  top: -2px;
-  right: -12px;
-  height: 57px;
-  width: 87px;
+  top: 3px;
+  left: 0px;
+  height: 30px;
+  width: 40px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
@@ -139,10 +198,10 @@
 
 .dropdown-menu::before {
   content: "";
-  position: absolute;
-  top: -5px;
+  position: fixed;
+  top: 0px;
   right: 20px;
-  height: 20px;
+  height: 0px;
   width: 20px;
   background: var(--secondary-bg);
   transform: rotate(45deg);
@@ -151,24 +210,39 @@
 .userImage {
   height: 60px;
   width: 60px;
-  border-radius: 50%;
+  border-radius: 10px;
+  margin-top: -5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(32, 149, 153);
 }
 .dropdown-menu.active {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(45px);
+  border-radius: 10px;
   transition: var(--speed) ease;
-  border-style: solid;
-  border-color: rgb(124, 8, 233);
+
+  border: solid rgb(32, 149, 153) 2px;
   width: 200px;
-  float: right;
+  /* margin-left: 100%; */
+
   background-color: black;
+  color: cyan;
+
+  position: fixed;
+}
+.menuHeader {
+  font-size: 20px;
+  font-weight: 100;
+  text-decoration-line: underline;
 }
 .dropdown-menu.inactive {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
+  transform: translateY(0px);
   transition: var(--speed) ease;
+  position: fixed;
 }
 
 h3 {
@@ -190,13 +264,13 @@ h3 span {
 
 .dropdown-menu ul {
   padding: 10px 0px 0px;
-  border-style: solid;
 }
 
 .dropdown-menu ul li {
   padding: 5px;
   font-size: 15px;
   text-align: right;
+  color: white;
 }
 
 .dropdown-menu ul li:hover a {
@@ -218,6 +292,7 @@ h3 span {
   max-width: 20px;
   margin-right: 10px;
   opacity: 0.5;
+
   transition: var(--speed);
 }
 .dropdownItem a {
@@ -229,5 +304,22 @@ h3 span {
 }
 
 .dropdownItem:hover {
-  background-color: rgb(124, 0, 240);
+  background-color: rgb(0, 198, 198);
+}
+.accountQuestion {
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  color: cyan;
+  font-size: smaller;
+  font-family: "Courier New", Courier, monospace;
+}
+.accountQuestion:hover {
+  color: rgb(1, 213, 213);
+  cursor: pointer;
+}
+.createAccount {
+  visibility: visible;
+}
+.createAccountInvisible {
+  visibility: hidden;
 }
