@@ -1,14 +1,13 @@
-import Logo from "../media/miniLogo.png";
-import MenuIcon from "../media/menu-icon.png";
-import LogoutButton from "../media/logoutButton.png";
-import userImage from "../media/userImage.png";
+import Logo from "../../media/miniLogo.png";
+import MenuIcon from "../../media/menu-icon.png";
+import LogoutButton from "../../media/logoutButton.png";
+import userImage from "../../media/userImage.png";
 import { Link } from "wouter";
-import App from "../App";
-import { UserInfo } from "../context";
+import { UserInfo } from "../../context/context";
 import { useContext } from "react";
 
 import React, { useState } from "react";
-import "../App.css";
+import "./Header.css";
 
 function Header() {
   const { information } = useContext(UserInfo);

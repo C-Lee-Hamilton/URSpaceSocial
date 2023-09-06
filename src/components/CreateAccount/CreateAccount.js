@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-
+import "./CreateAccount.css";
 function CreateAccount() {
   const [newUsername, setNewUsername] = useState("");
   const [newPassword, setNewPassword] = useState("");

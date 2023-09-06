@@ -1,8 +1,8 @@
-import Header from "./components/Header";
-import "./App.css";
-import StatusCreator from "./components/StatusCreator";
-import userImage from "./media/userImage.png";
-import { UserInfo } from "./context";
+import Header from "../../components/Header/Header";
+import "./UserProfile.css";
+import StatusCreator from "../../components/StatusCreator/StatusCreator";
+import userImage from "../../media/userImage.png";
+import { UserInfo } from "../../context/context";
 import { useContext } from "react";
 
 function UserProfile() {

@@ -1,11 +1,10 @@
-import "./App.css";
-import CreateAccount from "./components/CreateAccount";
+import "./styles/App.css";
+import CreateAccount from "./components/CreateAccount/CreateAccount";
 import { Link, Route, Switch } from "wouter";
-import UserProfile from "./UserProfile";
+import UserProfile from "./pages/UserProfile/UserProfile";
 import { useState } from "react";
-import { UserInfo } from "./context";
+import { UserInfo } from "./context/context";
 import { useContext } from "react";
-// import { Log } from "./components/Login";
 
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:5000";

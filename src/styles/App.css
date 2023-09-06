@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Irish";
+  src: url("../fonts/Irish.ttf") format("truetype");
+}
+
+.App {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.App-header {
+  border-width: 2px;
+  border-radius: 0px;
+  display: flex;
+  padding-left: 10px;
+  justify-content: right;
+
+  background-color: blueviolet;
+  font-size: 40px;
+  font-family: "Irish";
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px cyan, -2px -2px cyan;
+
+  background-image: linear-gradient(
+    rgb(32, 149, 153),
+    rgb(137, 220, 226),
+    rgb(172, 221, 255),
+    rgb(137, 174, 226),
+    rgb(94, 137, 153),
+    rgb(32, 149, 153)
+  );
+}
+
+.login {
+  background-color: black;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+  font-size: 12px;
+  border-radius: 10px;
+  margin-top: 100px;
+  border-style: outset;
+  border-color: rgb(0, 177, 177);
+  border-width: 10px;
+
+  background-image: linear-gradient(
+    rgb(32, 149, 153),
+    rgb(137, 220, 226),
+    rgb(172, 221, 255),
+    rgb(137, 174, 226),
+    rgb(94, 137, 153),
+    rgb(32, 149, 153)
+  );
+}
+.inputLogin {
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.inputLoginSubmit {
+  border-radius: 10px;
+  width: 100%;
+}
+.inputLoginSubmit:hover {
+  cursor: pointer;
+}
+.greeting {
+  background-color: rgba(0, 0, 0, 0);
+
+  margin: auto;
+  margin-bottom: -10px;
+  margin-top: -30px;
+  padding-top: 0px;
+  width: 150px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 40px;
+  font-family: "Irish";
+  color: black;
+
+  text-shadow: 2px 2px cyan, -2px -2px cyan;
+}
+
+.accountQuestion {
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  color: cyan;
+  font-size: smaller;
+  font-family: "Courier New", Courier, monospace;
+}
+.accountQuestion:hover {
+  color: rgb(1, 213, 213);
+  cursor: pointer;
+}
+.createAccount {
+  visibility: visible;
+}
+.createAccountInvisible {
+  visibility: hidden;
+}
