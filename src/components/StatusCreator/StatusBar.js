@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function StatusBar(props) {
   const [toggleList, setToggleList] = useState(false);
@@ -7,12 +8,17 @@ export default function StatusBar(props) {
   const { index, handleClick, content, setStatuses, statuses } = props;
   const status = content.status;
   const checked = content.checked;
+  const date = content.date;
 
   const onSubmitHandler = (e) => {
     const tempArr = [...statuses];
     tempArr[index].status = e.target.value;
     setStatuses([...tempArr]);
     console.log(status);
+    const updatedStatuses = [...tempArr];
+    axios.post("/Auth/add-status", {
+      allStatuses: updatedStatuses,
+    });
   };
 
   const editAndSaveFunc = () => {
@@ -55,6 +61,7 @@ export default function StatusBar(props) {
             save
           </button>
         )}
+        <h5>{date}</h5>
       </div>
     </div>
   );

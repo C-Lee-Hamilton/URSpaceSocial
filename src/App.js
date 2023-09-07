@@ -96,7 +96,7 @@ const Log = () => {
       <a onClick={viewCreate} className="accountQuestion">
         Don't have an account?
       </a>
-      <div className={create ? "createAccount" : "createAccountInvisible"}>
+      <div className={!create ? "createAccount" : "createAccountInvisible"}>
         <CreateAccount />
       </div>
     </>

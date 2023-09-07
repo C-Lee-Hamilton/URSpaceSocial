@@ -2,22 +2,56 @@ import "./StatusCreator.css";
 import { useState } from "react";
 import axios from "axios";
 import StatusBar from "./StatusBar";
+import { UserInfo } from "../../context/context";
+import { useContext } from "react";
 
 export default function StatusCreator() {
   const [status, setStatus] = useState("");
-  const [statuses, setStatuses] = useState([]);
   const [allChecked, setAllChecked] = useState(false);
+  const { information } = useContext(UserInfo);
+  const [statuses, setStatuses] = useState(information.allStatuses);
+  const [hour, setHour] = useState();
+  const [day, setDay] = useState();
+
+  var currentdate = new Date();
+  var currenthour = currentdate.getHours();
+  var datetime =
+    "Posted On: " +
+    (currentdate.getMonth() + 1) +
+    "/" +
+    currentdate.getDate() +
+    "/" +
+    currentdate.getFullYear() +
+    " @ " +
+    hour +
+    ":" +
+    currentdate.getMinutes() +
+    ":" +
+    currentdate.getSeconds() +
+    day;
 
   const addStatus = async () => {
     try {
-      const updatedStatuses = [...statuses, status];
+      // const timetime = () => {
+      if (currenthour > 12) {
+        setHour(currenthour - 12);
+        setDay("p.m.");
+      } else {
+        setHour(currenthour);
+        setDay("a.m.");
+        // }
+      }
+      const newStatus = { status: status, checked: false, date: datetime };
+      const updatedStatuses = [newStatus, ...statuses];
 
       await axios.post("/Auth/add-status", {
         allStatuses: updatedStatuses,
       });
 
-      // setStatuses(updatedStatus); // Update the interests array in state
-      setStatuses([...statuses, { status: status, checked: false }]);
+      setStatuses([
+        { status: status, checked: false, date: datetime },
+        ...statuses,
+      ]);
       localStorage.setItem("statuses", JSON.stringify(updatedStatuses)); //store to local
       setStatus(""); // Clear the input field
     } catch (error) {
@@ -29,14 +63,14 @@ export default function StatusCreator() {
     const tempArra = [...statuses];
     tempArra[index].checked = !tempArra[index].checked;
     setStatuses([...tempArra]);
+    // const updatedStatuseses = [...tempArra];
+    // axios.post("/Auth/add-status", {
+    //   allStatuses: updatedStatuseses,
+    // });
   };
 
   const onChangeHandler = (e) => {
     setStatus(e.target.value);
-  };
-  const onSubmitHandler = () => {
-    setStatuses([...statuses, { status: status, checked: false }]);
-    setStatus("");
   };
 
   const selectAll = () => {
@@ -52,6 +86,11 @@ export default function StatusCreator() {
   const deleter = () => {
     const tempCheck = statuses.filter((item) => item.checked === false);
     setStatuses([...tempCheck]);
+    const updatedStatuseses = [...tempCheck];
+
+    axios.post("/Auth/add-status", {
+      allStatuses: updatedStatuseses,
+    });
   };
 
   return (
